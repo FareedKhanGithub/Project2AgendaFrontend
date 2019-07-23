@@ -1,0 +1,26 @@
+<h1 class="display-4">Tasks</h1>
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+<table  class="table table-striped" >
+        <thead class ="thead-dark"><tr><th>Task Id</th><th>Date</th><th>Time</th><th>Description</th><th>Duration</th><th>Location</th><th>Status</th></tr></thead>
+        <tbody *ngFor="let task of tasks ">
+            <tr>
+                <td>{{task.taskId}}</td>
+                <td>{{task.taskDate | date:"mediumDate" | uppercase}}</td>
+                <td>{{task.taskDate | date:"mediumTime" | uppercase}}</td>
+                <td>{{task.taskDescription}}</td>
+                <td>{{task.duration}}</td>
+                <td>{{task.location}}</td>
+                <td>{{task.taskStatus}}</td>
+                <td><button (click)= "updateTask(task.taskId)" class="btn btn-success">Update Task</button></td>
+                <td><button (click)= "deleteTask(task.taskId)" class="btn btn-danger">Delete Task</button></td>
+            </tr>
+    
+        </tbody>
+    </table>
+
+    <div class="row">
+            <button (click)= "addTask()" class="btn btn-secondary btn-lg ">Add Task</button>
+            <button (click)= "goBack()" class="btn btn-primary btn-lg ">Back</button>
+        </div>

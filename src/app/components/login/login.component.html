@@ -1,0 +1,61 @@
+<!-- <div class="container">
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+    <div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Login</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" [(ngModel)] = "email" name="email" required /></td>
+        </tr>
+        <tr>
+            <td >Password</td>
+            <td><input type="password" [(ngModel)] = "password" name="password" required /></td>
+        </tr>
+        <tr>
+            <td><button (click) = "login()" class="btn btn-primary">Login</button></td>
+        </tr>
+    </tbody>
+
+</table>
+</div>
+<div><button (click) = "sendToResend()" class="btn btn-success">Forgot Password?</button></div>
+</div> -->
+
+<div class="container">
+        <div class="row">
+            <div class="form_bg">
+                <form>
+                     <h2 class="text-center">Login Page</h2>
+                    <br/>
+                    <div class="form-group">
+                        <input type="email" class="form-control" [(ngModel)] = "email" name="email"  placeholder="Email" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" [(ngModel)] = "password" name="password"  placeholder="Password" required>
+
+                        </div>
+                        <br/>
+                       <div class="align-center">
+                    <button button (click) = "login()" class="btn btn-primary" id="login">Login</button>
+                    <br/>
+                    <div class="align-center"><button (click) = "sendToResend()" class="btn btn-danger">Forgot Password?</button></div>
+                        </div>
+
+                        <div class="align-center"> <button class="btn btn-success" (click)="addusernav()"> Add new user</button></div>                      <!-- new part added herre -->
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+

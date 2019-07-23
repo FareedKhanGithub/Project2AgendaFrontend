@@ -1,0 +1,26 @@
+<h1 class="display-4"> Create Agenda</h1>
+<div class="container">
+
+
+        <fieldset class="form-group">
+                <label>Select Agenda</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" [(ngModel)]="type" name="type" id=""
+                            value="Personal">
+                        Personal
+                    </label>
+                    <br />
+                    <label class="form-check-label">
+                        <input type="radio" [(ngModel)]="type" name="type" id=""
+                            value="Business">
+                        Business
+                    </label>
+                </div>
+            </fieldset>
+
+    <div><button (click) = "createNewAgenda()" class="btn btn-dark">Create Agenda</button>
+        <button (click) = "goBack()" class="btn btn-primary">Go Back</button>
+    </div>
+    </div>
+    <!--  -->

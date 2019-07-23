@@ -1,0 +1,96 @@
+<div class="jumbotron" class="text-center">
+    <h1 class="display-3">Welcome {{welcomeUser}}</h1>
+    <p class="lead">Thanks for planning with us</p>
+    <hr class="my-2">
+    <div class="text-center">
+            <img  src="../../../assets/agendaImg.png" alt="agenda image not found" width="300" height="200">
+    </div>
+
+
+
+
+
+
+    <!-- USERID, USER_EMAIL, USERPASSWORD, FIRSTNAME, LASTNAME, PHONE_NUMBER, ADDRESS, CITY, STATE   -->
+    <table border="1" *ngIf= "user">        <!--if true or not null then exists   -->
+        <thead></thead>
+        <tr>
+        <th>user_id </th>
+        <th>user_email</th>
+        <th>user_password</th>
+        <th>first_name</th>
+        <th>last_name</th>
+        <th>phone_number</th>
+        <th>address</th>
+        <th>city</th>
+        <th>state</th>
+        </tr>
+
+
+        <tbody>
+
+
+
+
+        <!--use once and also right one with equal to user -->
+        <tr >
+                <tr>
+                        <td>{{user.userId}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.userPassword}}</td>
+                        <td>{{user.firstName}}</td>
+
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.phoneNumber}}</td>
+                        <td>{{user.address}}</td>
+                        <td>{{user.city}}</td>
+                        <td>{{user.state}}</td>
+
+
+            <div class="align-center"> <button class="btn btn-success" (click)="updateusernav()"> Update user</button></div>
+
+
+
+            <td><button class="btn btn-danger" (click)="deleteUserang(user.userId)"> Delete User</button></td>
+
+
+
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <p>More info</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+    </p> -->
+</div>
