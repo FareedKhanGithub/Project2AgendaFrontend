@@ -53,7 +53,7 @@ export class UserService {
 
 
 
-  deleteUserang(id:number) {           //doneish                                 //this should only show up for one person
+  deleteUserang(id:number) {                                        //this should only show up for one person
     console.log("You have deleted something using angular")                 //this should be here in main page
     return this.http.delete(this.serverUrl + "users/welcome/" + id );
 
